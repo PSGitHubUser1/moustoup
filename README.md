@@ -17,7 +17,7 @@ If mouse is unplugged, pressing same keybind will turn on touchpad.
 ## Installation
 
 1. Clone this repo with `git clone [url of this repo]`
-2. Open the folder
+2. Open the `moustoup/` folder in terminal
 3. Run:
    ```
    chmod 755 run.sh
