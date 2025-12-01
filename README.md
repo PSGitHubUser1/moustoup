@@ -14,7 +14,7 @@ If mouse is unplugged, pressing same keybind will turn on touchpad.
 - Hyprland
 - Packages: jq, hyprctl
 - BASH preferred
-## Todo
+## Installation
 
 1. Clone this repo with `git clone [url of this repo]`
 2. Open the folder
