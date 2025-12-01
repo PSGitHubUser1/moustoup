@@ -13,4 +13,15 @@ If mouse is unplugged, pressing same keybind will turn on touchpad.
 
 - Hyprland
 - Packages: jq, hyprctl
+- BASH preferred
+## Todo
+
+1. Clone this repo with `git clone [url of this repo]`
+2. Open the folder
+3. Run:
+   ```
+   chmod 755 run.sh
+   bash run.sh
+   ```
+4. If I typed the code perfectly, then it should work
 
