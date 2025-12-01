@@ -38,5 +38,7 @@ else
     echo "Restart Hyprland to apply changes."
 fi
 
+rm -f *.txt # removes mouse_name.txt & touchpad_name.txt
+
 # Run the script 
 # bash -e moustoup.sh
