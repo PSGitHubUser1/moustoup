@@ -1,4 +1,4 @@
-# moustoup
+# moustoup (Hyprland)
 
 This script allows you to check if your external mouse is plugged/unplugged. (For hyprland)
 
