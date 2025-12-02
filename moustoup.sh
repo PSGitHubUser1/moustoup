@@ -33,3 +33,5 @@ else
     hyprctl keyword "device[$TP_NAME]:enabled" true #hyprctl keyword device:"$TP_NAME:enabled" true
     notify-send -u low "Touchpad Enabled" "Mouse disconnected."
 fi
+
+#
