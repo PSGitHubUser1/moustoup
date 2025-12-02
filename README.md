@@ -9,13 +9,13 @@ When mouse is plugged-in, when you press <kbd>SUPER</kbd> + <kbd>F10</kbd>, the 
 If mouse is unplugged, pressing same keybind will turn on touchpad.
 
 
-## Requirements
+## $ Requirements
 
 - Hyprland
 - Packages: `jq`, `hyprctl`, `grep`
 - BASH preferred
 
-## Installation
+## $ Installation
 
 1. Clone this repo with `git clone [url of this repo]`
 2. Open the `moustoup/` folder in terminal
@@ -26,7 +26,7 @@ If mouse is unplugged, pressing same keybind will turn on touchpad.
    ```
 4. If I typed the code perfectly, then it should work
 
-## Uninstallation
+## $ Uninstallation
 
 1. Run:
    ```
