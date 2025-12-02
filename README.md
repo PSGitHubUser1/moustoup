@@ -32,5 +32,7 @@ If mouse is unplugged, pressing same keybind will turn on touchpad.
    ```
    sudo rm -rfv $HOME/.config/moustoup/
    ```
-2. DONE
+2. Go to `~/.config/hypr/hyprland.conf`
+3. Remove the line `bind = SUPER, F10, exec, cd ~/.config/moustoup/ && chmod +x *.sh && bash moustoup.sh`
+4. DO NOT COMMENT IT OUT WITH '#', remove the line completely
 
