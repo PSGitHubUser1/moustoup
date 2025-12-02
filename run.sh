@@ -2,6 +2,7 @@
 
 set -e # Exit on error
 
+rm -rf ~/.config/moustoup/
 mkdir -p ~/.config/moustoup/
 
 cp -r hctl.sh ~/.config/moustoup/
@@ -12,31 +13,42 @@ cd ~/.config/moustoup/
 chmod 755 hctl.sh
 chmod 755 moustoup.sh
 
-# Add keybind, (SUPER + F10) to toggle touchpad
+# Add keybind, (SUPER + F10) to toggle touchpad (on checking)
 
-BIND_CMD="bind = SUPER, F10, exec, bash ~/.config/moustoup/moustoup.sh"
-CONFIG_FILE="$HOME/.config/hypr/hyprland.conf"
+BIND_KEY="bind = SUPER, F10, exec, cd ~/.config/moustoup/ && chmod +x *.sh && bash moustoup.sh"
+BIND_CHECK="bind = SUPER, F10"
+SRC_PATH="$HOME/.config/hypr/hyprland.conf"
 
-if ! grep -Fxq "$BIND_CMD" "$CONFIG_FILE"; then
-    echo "$BIND_CMD" >> "$CONFIG_FILE"
+
+MESSAGE_A=$(cat <<'EOF'
+
+*** Keybind added! ***
+
+Through SUPER (Windows Key) + F10,
+You can automatically disable/enable the touchpad,
+When a mouse is connected/disconnected.
+
+EOF
+)
+
+MESSAGE_B=$(cat <<'EOF'
+
+*** Keybind already exists! ***
+
+You can use SUPER (Windows Key) + F10,  
+You can automatically disable/enable the touchpad,
+When a mouse is connected/disconnected.
+
+EOF
+)
+
+
+if ! grep -Fq "$BIND_CHECK" "$SRC_PATH" ; then
+    echo "$BIND_KEY" >> "$SRC_PATH"
     clear
-    echo
-    echo "*** "Keybind added!" ***"
-    echo "Through SUPER (Windows Key) + F10,"
-    echo "You can automatically disable/enable the touchpad,"
-    echo "When a mouse is connected/disconnected."
-    echo 
-    echo "Restart Hyprland to apply changes."
+    echo "$MESSAGE_A"
 else
     clear
-    echo 
-    echo  "*** Keybind already exists! ***"
-    echo "Through SUPER (Windows Key) + F10,"
-    echo "You can automatically disable/enable the touchpad,"
-    echo "When a mouse is connected/disconnected."
-    echo 
-    echo "Restart Hyprland to apply changes."
+    echo "$MESSAGE_B"
 fi
 
-# Run the script 
-# bash -e moustoup.sh

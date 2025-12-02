@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-bash -e hctl.sh # Runs htctl.sh to detect devices
+
+bash -e hctl.sh # Runs hctl.sh to detect devices
 
 set -e # Exit on error
 # Device names

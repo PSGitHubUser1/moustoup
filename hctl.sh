@@ -25,7 +25,8 @@ echo "========================="
 echo "TOUCHPAD: $TOUCHPAD"
 echo "MOUSE:    $MOUSE"
 echo "========================="
-
+echo 
+echo
 # Write results to TXT
 rm -f mouse_name.txt touchpad_name.txt
 echo "$TOUCHPAD" > touchpad_name.txt
