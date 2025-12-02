@@ -12,7 +12,7 @@ If mouse is unplugged, pressing same keybind will turn on touchpad.
 ## $ Requirements
 
 - Hyprland
-- Packages: `jq`, `hyprctl`, `grep`
+- Packages: `jq`, `hyprctl`, `grep` and `sed`
 - BASH preferred
 
 ## $ Installation
@@ -31,8 +31,7 @@ If mouse is unplugged, pressing same keybind will turn on touchpad.
 1. Run:
    ```
    sudo rm -rfv $HOME/.config/moustoup/
+   sudo sed -i '/moustoup/d' ~/.config/hypr/hyprland.conf
    ```
-2. Go to `~/.config/hypr/hyprland.conf` with `nano`,`vim` etc.
-3. Remove the line `bind = SUPER, F10, exec, cd ~/.config/moustoup/ && chmod +x *.sh && bash moustoup.sh`
-4. DO NOT COMMENT IT OUT WITH '#', remove the line completely
+2. DONE
 
