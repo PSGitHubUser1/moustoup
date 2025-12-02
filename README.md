@@ -30,7 +30,7 @@ If mouse is unplugged, pressing same keybind will turn on touchpad.
 
 1. Run:
    ```
-   sudo rm -rf $HOME/.config/moustoup
+   sudo rm -rf $HOME/.config/moustoup/
    ```
 2. DONE
 
