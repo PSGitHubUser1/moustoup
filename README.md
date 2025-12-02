@@ -16,7 +16,7 @@ If mouse is unplugged, pressing same keybind will turn on touchpad.
 - `hyprctl` is used which comes with Hyprland
 - BASH preferred
 
-## $ Installation
+## $ [Re]Installation
 
 1. Clone this repo:
    ```
