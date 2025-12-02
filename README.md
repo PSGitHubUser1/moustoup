@@ -26,7 +26,7 @@ If mouse is unplugged, pressing same keybind will turn on touchpad.
    ```
 4. If I typed the code perfectly, then it should work
 
-# Uninstallation
+## Uninstallation
 
 1. Run:
    ```
