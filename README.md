@@ -22,7 +22,7 @@ If mouse is unplugged, pressing same keybind will turn on touchpad.
 3. Run:
    ```
    chmod 755 run.sh
-   bash run.sh
+   sudo bash run.sh
    ```
 4. If I typed the code perfectly, then it should work
 
@@ -30,7 +30,7 @@ If mouse is unplugged, pressing same keybind will turn on touchpad.
 
 1. Run:
    ```
-   sudo rm -rf $HOME/.config/moustoup/
+   sudo rm -rfv $HOME/.config/moustoup/
    ```
 2. DONE
 
