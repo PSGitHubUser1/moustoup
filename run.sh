@@ -2,7 +2,7 @@
 
 set -e # Exit on error
 
-# Removing the old folder & keybinds
+# Removing the old folder & keybind
 sed -i '/moustoup/d' ~/.config/hypr/hyprland.conf
 sudo rm -rf ~/.config/moustoup/
 
