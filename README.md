@@ -12,7 +12,7 @@ If mouse is unplugged, pressing same keybind will turn on touchpad.
 ## Requirements
 
 - Hyprland
-- Packages: `jq`, `hyprctl`
+- Packages: `jq`, `hyprctl`, `grep`
 - BASH preferred
 
 ## Installation
