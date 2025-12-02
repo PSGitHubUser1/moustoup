@@ -12,7 +12,8 @@ If mouse is unplugged, pressing same keybind will turn on touchpad.
 ## $ Requirements
 
 - Hyprland
-- Packages: `jq`, `hyprctl`, `grep` and `sed`
+- Packages: `jq`, `grep` and `sed` (Install with apt/dnf/pacman)
+- `hyprctl` is used which comes with Hyprland
 - BASH preferred
 
 ## $ Installation
