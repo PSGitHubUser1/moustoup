@@ -12,20 +12,23 @@ If mouse is unplugged, pressing same keybind will turn on touchpad.
 ## $ Requirements
 
 - Hyprland
-- Packages: `jq`, `grep` and `sed` (Install with apt/dnf/pacman)
+- Packages: `git`,`jq`, `grep` and `sed` (Install with apt/dnf/pacman)
 - `hyprctl` is used which comes with Hyprland
 - BASH preferred
 
 ## $ Installation
 
-1. Clone this repo with `git clone [url of this repo]`
-2. Open the `moustoup/` folder in terminal
-3. Run:
+1. Clone this repo:
+   ```
+   git clone https://github.com/PSGitHubUser1/moustoup
+   ```
+3. Open the `moustoup/` folder in terminal
+4. Run:
    ```
    chmod 755 run.sh
    sudo bash run.sh
    ```
-4. If I typed the code perfectly, then it should work
+5. If I typed the code perfectly, then it should work
 
 ## $ Uninstallation
 
