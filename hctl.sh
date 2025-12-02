@@ -1,6 +1,14 @@
 #!/bin/bash
 
-# htcl - Get touchpad and mouse names using hyprctl and jq
+# SCRIPT NAME -> hctl.sh
+# 
+# 1. Grab the names (ID) of touchpad, external mouse
+# 2. If-not found touchpad -> give ERROR
+# 3. If-not found ext. mouse -> set the value of MOUSE variable = NONE
+# Print the IDs of touchpad & mouse
+# Export the IDs of both to 'mouse_name.txt' and 'touchpad_name.txt'
+#
+
 
 set -e # Exit on error
 
