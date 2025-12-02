@@ -2,7 +2,7 @@
 
 This script allows you to check if your external mouse is plugged/unplugged.
 
-When mouse is plugged-in, when you press `SUPER + F10`, the touchpad will disable
+When mouse is plugged-in, when you press <kbd>SUPER</kbd> + <kbd>F10</kbd>, the touchpad will disable
 
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;OR
 
