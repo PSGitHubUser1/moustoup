@@ -1,5 +1,13 @@
 #!/bin/sh
 
+# SCRIPT NAME -> run.sh
+#
+# 1. THIS SCRIPT WILL RUN OTHER SCRIPTS WITH PROPER RIGHTS
+# 2. WILL MAKE A KEYBIND (SUPER + F10) IF NOT EXISTS
+# 3. CAN BE USED TO INSTALL/REINSTALL 
+# 4. DISPLAY MESSAGE ON COMPLETION
+#
+
 set -e # Exit on error
 
 # Removing the old folder & keybind
