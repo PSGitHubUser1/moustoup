@@ -4,7 +4,7 @@ set -e # Exit on error
 
 # Removing the old folder & keybinds
 sed -i '/moustoup/d' ~/.config/hypr/hyprland.conf
-rm -rf ~/.config/moustoup/
+sudo rm -rf ~/.config/moustoup/
 
 # Copy & Creating 
 mkdir -p ~/.config/moustoup/
