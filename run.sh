@@ -2,7 +2,7 @@
 
 set -e # Exit on error
 
-mkdir --if-not-exists ~/.config/moustoup/
+mkdir -p ~/.config/moustoup/
 
 cp -r hctl.sh ~/.config/moustoup/
 cp -r moustoup.sh ~/.config/moustoup/
