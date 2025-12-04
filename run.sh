@@ -10,14 +10,14 @@
 
 set -e # Exit on error
 
+mkdir -p $HOME/.config/moustoup/icons/
 PATH=$HOME/.config/moustoup/
 
 # Removing the old folder & keybind
 sed -i '/moustoup/d' $HOME/.config/hypr/hyprland.conf
 sudo rm -rf $PATH
 
-# Copy & Creating 
-mkdir -p $HOME/.config/moustoup/icons/
+# Copy 
 cp -r *.sh $PATH/
 cp -r *.png $PATH/icons/
 
