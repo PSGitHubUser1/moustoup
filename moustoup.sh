@@ -17,7 +17,7 @@ TP_NAME="$(cat touchpad_name.txt)"
 MOUSE_NAME="$(cat mouse_name.txt)"
 
 # Icons 
-ICON_PATH=$HOME/.config/moustoup/
+ICON_PATH=$HOME/.config/moustoup/icons
 
 TP_ICON="$ICON_PATH/touchpad.png"
 MOUSE_ICON="$ICON_PATH/cursor.png"
