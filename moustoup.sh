@@ -27,7 +27,7 @@ if hyprctl devices | grep -q "$MOUSE_NAME"; then
     # Mouse is plugged -> Disable Touchpad
 
     hyprctl keyword "device[$TP_NAME]:enabled" false #hyprctl keyword device:"$TP_NAME:enabled" false
-    notify-send -u low -i "$MOUSE_ICON" "Touchpad Disabled" "Mouse detected"
+    notify-send -u low -i "$MOUSE_ICON" "Touchpad Disabled" "> Mouse detected"
     
 # TESTING FOR ICONS IN THE NOTIFICATION
 
@@ -37,7 +37,7 @@ if hyprctl devices | grep -q "$MOUSE_NAME"; then
 else
     # No mouse -> Enable Touchpad
     hyprctl keyword "device[$TP_NAME]:enabled" true #hyprctl keyword device:"$TP_NAME:enabled" true
-    notify-send -u low -i "$TP_ICON" "Touchpad Enabled" "Mouse not detected"
+    notify-send -u low -i "$TP_ICON" "Touchpad Enabled" "> Mouse not detected"
 fi
 
 #
