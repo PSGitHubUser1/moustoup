@@ -19,7 +19,7 @@ sudo rm -rf $PATH
 
 # Copy 
 cp -r *.sh $PATH/
-cp -r *.png $PATH/icons/
+cp -r icons/*.png $PATH/icons/
 
 # cd & make .sh executable
 cd $PATH
