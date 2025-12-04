@@ -10,17 +10,19 @@
 
 set -e # Exit on error
 
+PATH=$HOME/.config/moustoup/
+
 # Removing the old folder & keybind
 sed -i '/moustoup/d' $HOME/.config/hypr/hyprland.conf
-sudo rm -rf $HOME/.config/moustoup/
+sudo rm -rf $PATH
 
 # Copy & Creating 
-mkdir -p $HOME/.config/moustoup/
-
-cp -r *.{sh,png} $HOME/.config/moustoup/
+mkdir -p $HOME/.config/moustoup/icons/
+cp -r *.sh $PATH/
+cp -r *.png $PATH/icons/
 
 # cd & make .sh executable
-cd $HOME/.config/moustoup/
+cd $PATH
 
 chmod 755 hctl.sh
 chmod 755 moustoup.sh
