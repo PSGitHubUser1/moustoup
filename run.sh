@@ -59,10 +59,10 @@ EOF
 
 if ! grep -Fq "$BIND_CHECK" "$SRC_PATH" ; then
     echo "$BIND_KEY" >> "$SRC_PATH"
-    clear
+    #clear
     echo "$MESSAGE_A"
 else
-    clear
+    #clear
     echo "$MESSAGE_B"
 fi
 
