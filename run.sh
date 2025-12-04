@@ -9,7 +9,7 @@ mkdir -p "$SRCPATH"
 mkdir -p "$SRCPATH/icons"
 
 # Copy files (as user, no sudo needed - you own the folder)
-cp ./*.sh "$SRCPATH/" 2>/dev/null || echo "Warning: No .sh files found"
+cp ./{moustoup,hctl}.sh "$SRCPATH/" 2>/dev/null || echo "Warning: No .sh files found"
 cp ./icons/*.png "$SRCPATH/icons/" 2>/dev/null || echo "Warning: No icons found"
 
 # Make scripts executable
