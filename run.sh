@@ -1,70 +1,47 @@
 #!/bin/bash
+set -e
 
-# SCRIPT NAME -> run.sh
-#
-# 1. THIS SCRIPT WILL RUN OTHER SCRIPTS WITH PROPER RIGHTS
-# 2. WILL MAKE A KEYBIND (SUPER + F10) IF NOT EXISTS
-# 3. CAN BE USED TO INSTALL/REINSTALL 
-# 4. DISPLAY MESSAGE ON [NOT]COMPLETION
-#
+SRCPATH="$HOME/.config/moustoup"
+CONFIG_FILE="$HOME/.config/hypr/hyprland.conf"
 
-set -e # Exit on error
+# Create directories (as user, no sudo)
+mkdir -p "$SRCPATH"
+mkdir -p "$SRCPATH/icons"
 
-mkdir -p $HOME/.config/moustoup/icons/
-PATH=$HOME/.config/moustoup/
+# Copy files (as user, no sudo needed - you own the folder)
+cp ./*.sh "$SRCPATH/" 2>/dev/null || echo "Warning: No .sh files found"
+cp ./icons/*.png "$SRCPATH/icons/" 2>/dev/null || echo "Warning: No icons found"
 
-# Removing the old folder & keybind
-sed -i '/moustoup/d' $HOME/.config/hypr/hyprland.conf || true
-sudo rm -rf $PATH
+# Make scripts executable
+chmod 755 "$SRCPATH"/*.sh
 
-# Copy 
-cp -r *.sh $PATH/
-cp -r icons/*.png $PATH/icons/
-
-# cd & make .sh executable
-cd $PATH
-
-chmod 755 hctl.sh
-chmod 755 moustoup.sh
-
-# Add keybind, (SUPER + F10) to toggle touchpad (on checking)
-
-BIND_KEY="bind = SUPER, F10, exec, cd $HOME/.config/moustoup/ && chmod +x *.sh && bash moustoup.sh"
+# Add keybind
+BIND_KEY="bind = SUPER, F10, exec, cd $SRCPATH && bash moustoup.sh"
 BIND_CHECK="bind = SUPER, F10"
-SRC_PATH="$HOME/.config/hypr/hyprland.conf"
-
 
 MESSAGE_A=$(cat <<'EOF'
 
-*** Keybind added! ***
+*** Keybind Added! ***
 
-Through SUPER (Windows Key) + F10,
-You can automatically disable/enable the touchpad,
-When a mouse is connected/disconnected.
+Press SUPER (Windows Key) + F10 to toggle touchpad.
 
 EOF
 )
 
 MESSAGE_B=$(cat <<'EOF'
 
-*** Keybind already exists! ***
+*** Keybind Already Exists! ***
 
-You can use SUPER (Windows Key) + F10,  
-You can automatically disable/enable the touchpad,
-When a mouse is connected/disconnected.
+SUPER (Windows Key) + F10 is ready to use.
 
 EOF
 )
 
-
-if ! grep -Fq "$BIND_CHECK" "$SRC_PATH" ; then
-    echo "$BIND_KEY" >> "$SRC_PATH"
-    #clear
+if ! grep -Fq "$BIND_CHECK" "$CONFIG_FILE"; then
+    echo "$BIND_KEY" >> "$CONFIG_FILE"
     echo "$MESSAGE_A"
 else
-    #clear
     echo "$MESSAGE_B"
 fi
 
 #
-
