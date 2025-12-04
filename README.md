@@ -26,7 +26,7 @@ If mouse is unplugged, pressing same keybind will turn on touchpad.
 4. Run:
    ```
    chmod 755 run.sh
-   sudo bash run.sh
+   bash run.sh
    ```
 5. If I typed the code perfectly, then it should work
 
