@@ -18,6 +18,8 @@ If mouse is unplugged, pressing same keybind will turn on touchpad.
 
 ## $ [Re]Installation
 
+**NOTE: DO NOT RUN IN $HOME OR ~ DIRECTORY, CLONE THE REPO (git clone) IN DESKTOP/DOWNLOADS OR ELSE**
+
 1. Run:
    ```
    git clone https://github.com/PSGitHubUser1/moustoup
