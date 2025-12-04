@@ -12,8 +12,6 @@ bash -e hctl.sh # Runs hctl.sh to detect devices
 
 set -e # Exit on error
 
-
-
 # Device names
 TP_NAME="$(cat touchpad_name.txt)"
 MOUSE_NAME="$(cat mouse_name.txt)"
