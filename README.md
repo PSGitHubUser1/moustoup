@@ -20,7 +20,8 @@ If mouse is unplugged, pressing same keybind will turn on touchpad.
 
 1. Clone this repo:
    ```
-   git clone https://github.com/PSGitHubUser1/moustoup; cd moustoup/
+   git clone https://github.com/PSGitHubUser1/moustoup
+   cd moustoup/
    ```
 3. Run:
    ```
