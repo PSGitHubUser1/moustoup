@@ -18,17 +18,14 @@ If mouse is unplugged, pressing same keybind will turn on touchpad.
 
 ## $ [Re]Installation
 
-1. Clone this repo:
+1. Run:
    ```
    git clone https://github.com/PSGitHubUser1/moustoup
    cd moustoup/
-   ```
-3. Run:
-   ```
    chmod 755 run.sh
    bash run.sh
    ```
-4. If I typed the code perfectly, then it should work
+2. If I typed the code perfectly, then it should work
 
 ## $ Uninstallation
 
