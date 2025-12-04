@@ -11,23 +11,23 @@
 set -e # Exit on error
 
 # Removing the old folder & keybind
-sed -i '/moustoup/d' ~/.config/hypr/hyprland.conf
-sudo rm -rf ~/.config/moustoup/
+sed -i '/moustoup/d' $HOME/.config/hypr/hyprland.conf
+sudo rm -rf $HOME/.config/moustoup/
 
 # Copy & Creating 
-mkdir -p ~/.config/moustoup/
+mkdir -p $HOME/.config/moustoup/
 
-cp -r hctl.sh ~/.config/moustoup/
-cp -r moustoup.sh ~/.config/moustoup/
+cp -r *.{sh,png} $HOME/.config/moustoup/
 
-cd ~/.config/moustoup/
+# cd & make .sh executable
+cd $HOME/.config/moustoup/
 
 chmod 755 hctl.sh
 chmod 755 moustoup.sh
 
 # Add keybind, (SUPER + F10) to toggle touchpad (on checking)
 
-BIND_KEY="bind = SUPER, F10, exec, cd ~/.config/moustoup/ && chmod +x *.sh && bash moustoup.sh"
+BIND_KEY="bind = SUPER, F10, exec, cd $HOME/.config/moustoup/ && chmod +x *.sh && bash moustoup.sh"
 BIND_CHECK="bind = SUPER, F10"
 SRC_PATH="$HOME/.config/hypr/hyprland.conf"
 
