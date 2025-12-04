@@ -14,7 +14,7 @@ mkdir -p $HOME/.config/moustoup/icons/
 PATH=$HOME/.config/moustoup/
 
 # Removing the old folder & keybind
-sed -i '/moustoup/d' $HOME/.config/hypr/hyprland.conf
+sed -i '/moustoup/d' $HOME/.config/hypr/hyprland.conf || true
 sudo rm -rf $PATH
 
 # Copy 
