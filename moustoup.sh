@@ -8,20 +8,28 @@
 # 4. Send notification to inform user
 #
 
-
-
 bash -e hctl.sh # Runs hctl.sh to detect devices
 
 set -e # Exit on error
+
+
+
 # Device names
 TP_NAME="$(cat touchpad_name.txt)"
 MOUSE_NAME="$(cat mouse_name.txt)"
 
+# Icons 
+ICON_PATH=$HOME/.config/moustoup/
+
+TP_ICON="$ICON_PATH/touchpad.png"
+MOUSE_ICON="$ICON_PATH/cursor.png"
+
 # Check if mouse is listed in Hyprland devices
 if hyprctl devices | grep -q "$MOUSE_NAME"; then
     # Mouse is plugged -> Disable Touchpad
+
     hyprctl keyword "device[$TP_NAME]:enabled" false #hyprctl keyword device:"$TP_NAME:enabled" false
-    notify-send -u low "Touchpad Disabled" "Mouse detected."
+    notify-send -u low -i "$MOUSE_ICON" "Touchpad Disabled" "Mouse detected."
     
 # TESTING FOR ICONS IN THE NOTIFICATION
 
@@ -31,7 +39,7 @@ if hyprctl devices | grep -q "$MOUSE_NAME"; then
 else
     # No mouse -> Enable Touchpad
     hyprctl keyword "device[$TP_NAME]:enabled" true #hyprctl keyword device:"$TP_NAME:enabled" true
-    notify-send -u low "Touchpad Enabled" "Mouse disconnected."
+    notify-send -u low -i "$TP_ICON" "Touchpad Enabled" "Mouse disconnected."
 fi
 
 #
