@@ -17,7 +17,7 @@ chmod 755 "$SRCPATH"/*.sh
 
 # Add keybind
 BIND_KEY="bind = SUPER, F10, exec, cd $SRCPATH && bash moustoup.sh"
-BIND_CHECK="bind = SUPER, F10"
+BIND_CHECK="bind = SUPER, F10, exec"
 
 MESSAGE_A=$(cat <<'EOF'
 
